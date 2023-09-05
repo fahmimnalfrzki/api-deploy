@@ -1,0 +1,15 @@
+{
+  "devCommand": "uvicorn hck8:app --host 0.0.0.0 --port 3000",
+  "builds": [
+    {
+      "src": "hck8.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "hck8.py"
+    }
+  ]
+}
